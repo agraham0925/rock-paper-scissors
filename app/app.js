@@ -1,20 +1,26 @@
 console.log('test')
 
-
+const options = ["rock", "paper", "scissors"];
 
 let player1 = "scissors";
-let player2 = "rock";
+let compMove;
 
 
+// need to add computer functionality to randomly select an option
+// function should be called on a click and display winner
+// add time delay count down and display text "rock, paper, scissors, SHOOT!"
+	// then displays what comp played and what you played
+	// declares winner
 
-function play(player1, player2) {
+function play(player1, compMove) {
 
-	const options = ["rock", "paper", "scissors"];
+	compMove = options[Math.floor(options.length * Math.random())];
 
 	const p1 = options.indexOf(player1);
-	const p2 = options.indexOf(player2);
+	const p2 = options.indexOf(compMove);
 
 	console.log(p1, " this is p1")
+	console.log(compMove, " this is compMove")
 	console.log(p2, " this is p2")
 
 	if(p1 === p2) {
