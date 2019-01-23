@@ -2,7 +2,7 @@ console.log('test')
 
 const options = ["rock", "paper", "scissors"];
 
-let player1 = "scissors";
+let player1;
 let compMove;
 
 
@@ -14,12 +14,16 @@ let compMove;
 
 function play(player1, compMove) {
 
+	event.preventDefault()
+	
+	player1 = document.getElementById("userTxt").value;
 	compMove = options[Math.floor(options.length * Math.random())];
 
 	const p1 = options.indexOf(player1);
 	const p2 = options.indexOf(compMove);
 
 	console.log(p1, " this is p1")
+	console.log(player1, " this is player1")
 	console.log(compMove, " this is compMove")
 	console.log(p2, " this is p2")
 
@@ -37,4 +41,9 @@ function play(player1, compMove) {
 		return "player 2 wins!";
 	}
 };
+
+
+const submitBtn = document.querySelector('.submitBtn')
+
+submitBtn.addEventListener('click', play)
 
