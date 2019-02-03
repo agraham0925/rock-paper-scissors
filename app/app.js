@@ -1,13 +1,13 @@
-console.log('test')
 
 const options = ["rock", "paper", "scissors"];
 
 let player1;
 let compMove;
 
+let winText = document.createElement("p");
+const displayWinner = document.querySelector('.display-winner');
 
-// need to add computer functionality to randomly select an option
-// function should be called on a click and display winner
+
 // add time delay count down and display text "rock, paper, scissors, SHOOT!"
 	// then displays what comp played and what you played
 	// declares winner
@@ -28,17 +28,27 @@ function play(player1, compMove) {
 	console.log(p2, " this is p2")
 
 	if(p1 === p2) {
-		return "draw!";
+		// return "draw!";
+		displayWinner.innerHTML = "It's a draw!"
+		// document.body.appendChild(displayWinner, winText)
 	} else if(p1 > p2) {
 		if (p1 == 2 && p2 == 0) {
-			return "player 2 wins!";
+			displayWinner.innerHTML = "player 2 wins!"
+			// document.body.appendChild(displayWinner, winText)
+			// return "player 2 wins!";
 		} else {
-			return "player 1 wins!";
+			// return "player 1 wins!";
+			displayWinner.innerHTML = "player 1 wins!"
+			// document.body.appendChild(displayWinner, winText)
 		}
 	} else if(p1 == 0 && p2 == 2) {
-		return "player 1 wins!";
+		// return "player 1 wins!";
+		displayWinner.innerHTML = "player 1 wins!"
+		// document.body.appendChild(displayWinner, winText)
 	} else {
-		return "player 2 wins!";
+		// return "player 2 wins!";
+		displayWinner.innerHTML = "player 2 wins!"
+		// document.body.appendChild(displayWinner, winText)
 	}
 };
 
