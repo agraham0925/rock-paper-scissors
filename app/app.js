@@ -22,33 +22,29 @@ function play(player1, compMove) {
 	const p1 = options.indexOf(player1);
 	const p2 = options.indexOf(compMove);
 
-	console.log(p1, " this is p1")
-	console.log(player1, " this is player1")
-	console.log(compMove, " this is compMove")
-	console.log(p2, " this is p2")
 
 	if(p1 === p2) {
-		// return "draw!";
+
 		displayWinner.innerHTML = "It's a draw!"
-		// document.body.appendChild(displayWinner, winText)
+
 	} else if(p1 > p2) {
 		if (p1 == 2 && p2 == 0) {
-			displayWinner.innerHTML = "player 2 wins!"
-			// document.body.appendChild(displayWinner, winText)
-			// return "player 2 wins!";
+
+			displayWinner.innerHTML = "The computer wins!"
+			
 		} else {
-			// return "player 1 wins!";
-			displayWinner.innerHTML = "player 1 wins!"
-			// document.body.appendChild(displayWinner, winText)
+			
+			displayWinner.innerHTML = "You win!"
+			
 		}
 	} else if(p1 == 0 && p2 == 2) {
-		// return "player 1 wins!";
-		displayWinner.innerHTML = "player 1 wins!"
-		// document.body.appendChild(displayWinner, winText)
+		
+		displayWinner.innerHTML = "You win!"
+		
 	} else {
-		// return "player 2 wins!";
-		displayWinner.innerHTML = "player 2 wins!"
-		// document.body.appendChild(displayWinner, winText)
+
+		displayWinner.innerHTML = "The computer wins!"
+		
 	}
 };
 
@@ -60,5 +56,5 @@ function playAgain() {
 const submitBtn = document.querySelector('.submitBtn');
 const playAgainBtn = document.querySelector('.play-again');
 
-submitBtn.addEventListener('click', play)
-playAgainBtn.addEventListener('click', playAgain)
+submitBtn.addEventListener('click', play);
+playAgainBtn.addEventListener('click', playAgain);
