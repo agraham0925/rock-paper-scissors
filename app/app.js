@@ -42,8 +42,13 @@ function play(player1, compMove) {
 	}
 };
 
+function playAgain() {
+	location.reload();
+}
 
-const submitBtn = document.querySelector('.submitBtn')
+
+const submitBtn = document.querySelector('.submitBtn');
+const playAgainBtn = document.querySelector('.play-again');
 
 submitBtn.addEventListener('click', play)
-
+playAgainBtn.addEventListener('click', playAgain)
