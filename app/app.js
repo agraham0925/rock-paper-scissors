@@ -13,8 +13,9 @@ const displayCompMove = document.querySelector('.display-move2');
 
 
 // add time delay count down and display text "rock, paper, scissors, SHOOT!"
-	// display what comp played 
-	// display what the user played
+// add validation to prevent blank play and incorrect input
+// sprits/images <-- animated?
+
 
 
 function play(player1, compMove) {
