@@ -6,11 +6,16 @@ let compMove;
 
 let winText = document.createElement("p");
 const displayWinner = document.querySelector('.display-winner');
+const displayPlayerMove = document.querySelector('.display-move1');
+const displayCompMove = document.querySelector('.display-move2');
+
+
 
 
 // add time delay count down and display text "rock, paper, scissors, SHOOT!"
-	// then displays what comp played and what you played
-	// declares winner
+	// display what comp played 
+	// display what the user played
+
 
 function play(player1, compMove) {
 
@@ -26,24 +31,34 @@ function play(player1, compMove) {
 	if(p1 === p2) {
 
 		displayWinner.innerHTML = "It's a draw!"
+		displayPlayerMove.innerHTML = options[p1]
+		displayCompMove.innerHTML = options[p2]
 
 	} else if(p1 > p2) {
 		if (p1 == 2 && p2 == 0) {
 
 			displayWinner.innerHTML = "The computer wins!"
+			displayPlayerMove.innerHTML = options[p1]
+			displayCompMove.innerHTML = options[p2]
 			
 		} else {
 			
 			displayWinner.innerHTML = "You win!"
+			displayPlayerMove.innerHTML = options[p1]
+			displayCompMove.innerHTML = options[p2]
 			
 		}
 	} else if(p1 == 0 && p2 == 2) {
 		
 		displayWinner.innerHTML = "You win!"
+		displayPlayerMove.innerHTML = options[p1]
+		displayCompMove.innerHTML = options[p2]
 		
 	} else {
 
 		displayWinner.innerHTML = "The computer wins!"
+		displayPlayerMove.innerHTML = options[p1]
+		displayCompMove.innerHTML = options[p2]
 		
 	}
 };
