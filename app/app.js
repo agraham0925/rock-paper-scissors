@@ -28,39 +28,63 @@ function play(playerMove, compMove) {
 	const p1 = moves.indexOf(playerMove);
 	const p2 = moves.indexOf(compMove);
 
-	if(p1 === p2) {
 
-		displayWinner.innerHTML = "It's a draw!"
-		displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`
-		displayCompMove.innerHTML = `Computer move: ${moves[p2]}`
+	switch (true) {
+		case p1 === p2:
+			displayWinner.innerHTML = "It's a draw!";
+			displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`;
+			displayCompMove.innerHTML = `Computer move: ${moves[p2]}`;
+			break;
+		case p1 == 2 && p2 == 0:
+			displayWinner.innerHTML = "The computer wins!";
+			displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`;
+			displayCompMove.innerHTML = `Computer move: ${moves[p2]}`;
+			break;
+		case p1 == 1 && p2 == 0:
+		case p1 == 0 && p2 == 2:
+			displayWinner.innerHTML = "You win!";
+			displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`;
+			displayCompMove.innerHTML = `Computer move: ${moves[p2]}`;
+			break;
+		default:
+			displayWinner.innerHTML = "The computer wins!";
+			displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`;
+			displayCompMove.innerHTML = `Computer move: ${moves[p2]}`;
+	};
 
-	} else if(p1 > p2) {
-		if (p1 == 2 && p2 == 0) {
+	// if(p1 === p2) {
 
-			displayWinner.innerHTML = "The computer wins!"
-			displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`
-			displayCompMove.innerHTML = `Computer move: ${moves[p2]}`
+	// 	displayWinner.innerHTML = "It's a draw!"
+	// 	displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`
+	// 	displayCompMove.innerHTML = `Computer move: ${moves[p2]}`
+
+	// } else if(p1 > p2) {
+		// if (p1 == 2 && p2 == 0) {
+
+		// 	displayWinner.innerHTML = "The computer wins!"
+		// 	displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`
+		// 	displayCompMove.innerHTML = `Computer move: ${moves[p2]}`
 			
-		} else {
+		// } else {
 			
-			displayWinner.innerHTML = "You win!"
-			displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`
-			displayCompMove.innerHTML = `Computer move: ${moves[p2]}`
+	// 		displayWinner.innerHTML = "You win!"
+	// 		displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`
+	// 		displayCompMove.innerHTML = `Computer move: ${moves[p2]}`
 		
-		}
-	} else if(p1 == 0 && p2 == 2) {
+	// 	}
+	// } else if(p1 == 0 && p2 == 2) {
 		
-		displayWinner.innerHTML = "You win!"
-		displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`
-		displayCompMove.innerHTML = `Computer move: ${moves[p2]}`
+	// 	displayWinner.innerHTML = "You win!"
+	// 	displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`
+	// 	displayCompMove.innerHTML = `Computer move: ${moves[p2]}`
 		
-	} else {
+	// } else {
 
-		displayWinner.innerHTML = "The computer wins!"
-		displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`
-		displayCompMove.innerHTML = `Computer move: ${moves[p2]}`
+	// 	displayWinner.innerHTML = "The computer wins!"
+	// 	displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`
+	// 	displayCompMove.innerHTML = `Computer move: ${moves[p2]}`
 		
-	}
+	// }
 };
 
 function playAgain() {
