@@ -59,40 +59,6 @@ function play(playerMove, compMove) {
 					displayCompMove.innerHTML = `Computer move: ${moves[p2]}`;
 		}
 	}, 1000)		
-
-	// if(p1 === p2) {
-
-	// 	displayWinner.innerHTML = "It's a draw!"
-	// 	displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`
-	// 	displayCompMove.innerHTML = `Computer move: ${moves[p2]}`
-
-	// } else if(p1 > p2) {
-		// if (p1 == 2 && p2 == 0) {
-
-		// 	displayWinner.innerHTML = "The computer wins!"
-		// 	displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`
-		// 	displayCompMove.innerHTML = `Computer move: ${moves[p2]}`
-			
-		// } else {
-			
-	// 		displayWinner.innerHTML = "You win!"
-	// 		displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`
-	// 		displayCompMove.innerHTML = `Computer move: ${moves[p2]}`
-		
-	// 	}
-	// } else if(p1 == 0 && p2 == 2) {
-		
-	// 	displayWinner.innerHTML = "You win!"
-	// 	displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`
-	// 	displayCompMove.innerHTML = `Computer move: ${moves[p2]}`
-		
-	// } else {
-
-	// 	displayWinner.innerHTML = "The computer wins!"
-	// 	displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`
-	// 	displayCompMove.innerHTML = `Computer move: ${moves[p2]}`
-		
-	// }
 };
 
 function playAgain() {
