@@ -28,29 +28,37 @@ function play(playerMove, compMove) {
 	const p1 = moves.indexOf(playerMove);
 	const p2 = moves.indexOf(compMove);
 
+	displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`;
 
-	switch (true) {
-		case p1 === p2:
-			displayWinner.innerHTML = "It's a draw!";
-			displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`;
-			displayCompMove.innerHTML = `Computer move: ${moves[p2]}`;
-			break;
-		case p1 == 2 && p2 == 0:
-			displayWinner.innerHTML = "The computer wins!";
-			displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`;
-			displayCompMove.innerHTML = `Computer move: ${moves[p2]}`;
-			break;
-		case p1 == 1 && p2 == 0:
-		case p1 == 0 && p2 == 2:
-			displayWinner.innerHTML = "You win!";
-			displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`;
-			displayCompMove.innerHTML = `Computer move: ${moves[p2]}`;
-			break;
-		default:
-			displayWinner.innerHTML = "The computer wins!";
-			displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`;
-			displayCompMove.innerHTML = `Computer move: ${moves[p2]}`;
-	};
+	setTimeout(function(){
+		switch (true) {
+			case p1 === p2:
+				 
+					displayWinner.innerHTML = "It's a draw!";
+					displayCompMove.innerHTML = `Computer move: ${moves[p2]}`;
+
+				break;
+
+			case p1 == 2 && p2 == 0:
+	
+					displayWinner.innerHTML = "The computer wins!";
+					displayCompMove.innerHTML = `Computer move: ${moves[p2]}`;
+
+				break;
+
+			case p1 == 1 && p2 == 0:
+			case p1 == 0 && p2 == 2:
+	
+					displayWinner.innerHTML = "You win!";
+					displayCompMove.innerHTML = `Computer move: ${moves[p2]}`;
+				break;
+
+			default:
+	
+					displayWinner.innerHTML = "The computer wins!";
+					displayCompMove.innerHTML = `Computer move: ${moves[p2]}`;
+		}
+	}, 1000)		
 
 	// if(p1 === p2) {
 
