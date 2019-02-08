@@ -4,11 +4,12 @@ h1, p, form, button {
 
 @keyframes test {
 	0%   { opacity: 0; }
-  	100% { opacity: 1; }
+  	75% { opacity: 1; }
 }
 
 
 .box {
 	background-color: violet;
 	animation: test 2s infinite;
+	animation-timing-function: ease-in-out;
 }
