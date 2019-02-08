@@ -1,3 +1,14 @@
 h1, p, form, button {
 	text-align: center;
 }
+
+@keyframes test {
+	0%   { opacity: 0; }
+  	100% { opacity: 1; }
+}
+
+
+.box {
+	background-color: violet;
+	animation: test 2s infinite;
+}
