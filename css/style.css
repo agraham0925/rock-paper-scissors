@@ -3,9 +3,13 @@ h1, p, form, button {
 }
 
 .scissors {
-  	background: url('../images/scissors-sprite.png');
-  	width: 350px;
-	height: 300px;
-	/*width: 2391px;
-	height: 1300px;*/
+  	background: url('../images/scissors-sprite.png') left center;
+  	width: 345px;
+	height: 375px;
+	animation: play .9s steps(7) infinite;
+	padding-bottom: 150px;
+}
+
+@keyframes play {
+   100% { background-position: -2391px; }
 }
