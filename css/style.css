@@ -8,6 +8,7 @@ h1, p, form, button {
 	height: 375px;
 	animation: play .9s steps(7) infinite;
 	padding-bottom: 150px;
+	margin: 2% auto;
 }
 
 @keyframes play {
