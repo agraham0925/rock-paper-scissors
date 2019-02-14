@@ -3,9 +3,9 @@ h1, p, form, button {
 }
 
 .scissors {
-  	background: url('../images/scissors-sprite.png') left center;
+  	background: url('../images/scissors-sprite-2.png') left center;
   	width: 345px;
-	height: 375px;
+	height: 205px;
 	animation: play .9s steps(7) infinite;
 	padding-bottom: 150px;
 	margin: 2% auto;
