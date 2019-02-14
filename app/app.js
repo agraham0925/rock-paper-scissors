@@ -28,7 +28,7 @@ function play(playerMove, compMove) {
 	const p2 = moves.indexOf(compMove);
 
 	displayPlayerMove.innerHTML = `Your move: ${moves[p1]}`;
-
+	
 	setTimeout(function(){
 		switch (true) {
 			case p1 === p2:
@@ -59,6 +59,7 @@ function play(playerMove, compMove) {
 		}
 	}, 1000)		
 };
+
 
 function playAgain() {
 	clearTimeout()
